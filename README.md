@@ -28,13 +28,13 @@ Add this marketplace to your Claude Code installation using one of the following
 #### Option 1: From GitHub (Recommended)
 
 ```bash
-/plugin marketplace add FunkyOz/claude-code-plugins
+/plugin marketplace add funkyoz/funkyoz-plugins
 ```
 
 #### Option 2: From Git URL
 
 ```bash
-/plugin marketplace add https://github.com/FunkyOz/claude-code-plugins.git
+/plugin marketplace add https://github.com/funkyoz/funkyoz-plugins.git
 ```
 
 #### Option 3: From Local Path
@@ -183,7 +183,7 @@ If your team uses the marketplace configuration in `.claude/settings.json`, team
   "extraKnownMarketplaces": [
     {
       "source": "github",
-      "repo": "FunkyOz/claude-code-plugins"
+      "repo": "funkyoz/funkyoz-plugins"
     }
   ]
 }
@@ -222,7 +222,7 @@ Add this to your project's `.claude/settings.json`:
   "extraKnownMarketplaces": [
     {
       "source": "github",
-      "repo": "FunkyOz/claude-code-plugins"
+      "repo": "funkyoz/funkyoz-plugins"
     }
   ]
 }
@@ -237,7 +237,7 @@ When team members trust the repository, Claude Code will automatically install t
 If you get an error when adding the marketplace:
 
 1. **Check your internet connection** - Ensure you can access GitHub
-2. **Verify the repository exists** - Visit [https://github.com/FunkyOz/claude-code-plugins](https://github.com/FunkyOz/claude-code-plugins)
+2. **Verify the repository exists** - Visit [https://github.com/funkyoz/funkyoz-plugins](https://github.com/funkyoz/funkyoz-plugins)
 3. **Check for typos** - Make sure you've entered the correct owner/repo name
 
 ### Plugin Installation Fails
@@ -265,7 +265,7 @@ If marketplace or plugin updates fail:
 4. **Remove and reinstall** - As a last resort:
    ```bash
    /plugin marketplace remove claude-code-plugins
-   /plugin marketplace add FunkyOz/claude-code-plugins
+   /plugin marketplace add funkyoz/funkyoz-plugins
    ```
 
 ### Validation Errors
