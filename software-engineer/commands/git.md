@@ -54,37 +54,74 @@ Create a new branch for working on a specific task.
 
 ### `commit` - Commit Task Progress
 
-Create a commit for the current task work.
+Create a comprehensive commit for the current task work.
 
 **Process:**
 1. Check for uncommitted changes
 2. Identify current task (from branch name or in-progress task)
-3. Stage all changes (or ask user what to stage)
-4. Generate commit message:
-   ```
-   [Task XX] Brief description of changes
-   
-   - Detailed change 1
-   - Detailed change 2
-   
-   Progress: X/Y acceptance criteria met
-   ```
-5. Create the commit
-6. Confirm to user
+3. Analyze changed files and diffs to understand what was modified
+4. Stage all changes (or ask user what to stage)
+5. Auto-generate comprehensive commit message:
+   - Descriptive title (max 50 characters)
+   - Detailed description (3-4 lines max) based on actual code changes
+   - NO acceptance criteria
+   - NO author information in message body
+6. Show generated commit message to user for approval
+7. Create the commit after user approval
+8. Confirm to user
 
-**Commit Message Format:**
+**Commit Message Generation Rules:**
+
+1. **Analyze Changes First:**
+   - Read the git diff to understand what changed
+   - Identify which files were modified, added, or deleted
+   - Understand the nature of changes (new feature, bug fix, refactor, etc.)
+
+2. **Generate Descriptive Title:**
+   - Format: `[Task XX] <type>: <concise description>`
+   - Keep under 50 characters
+   - Use imperative mood ("Add feature" not "Added feature")
+   - Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `perf`, `style`
+   - Example: `[Task 05] feat: Add token validation to lexer`
+
+3. **Generate Detailed Description:**
+   - 3-4 lines maximum
+   - Focus on WHAT changed and WHY
+   - Be specific about implementation details
+   - Mention key files or components affected
+   - Do NOT include acceptance criteria
+   - Do NOT include author information
+   - Example:
+     ```
+     Implemented token validation logic in the lexer component to ensure
+     proper syntax checking. Added TokenValidator class with validation rules
+     for identifiers, keywords, and operators. Updated Lexer.php to integrate
+     validation during tokenization process.
+     ```
+
+4. **Review and Approval:**
+   - Display the generated message to user
+   - Ask: "Is this commit message acceptable? (yes/edit/cancel)"
+   - If "edit": allow user to modify the message
+   - If "cancel": abort the commit
+   - If "yes": proceed with commit
+
+**Example Commit Message:**
 ```
-[Task XX] <type>: <short description>
+[Task 05] feat: Add token validation to lexer
 
-<detailed description of changes>
-
-Acceptance Criteria Progress:
-- [x] Criterion 1
-- [x] Criterion 2  
-- [ ] Criterion 3 (pending)
+Implemented token validation logic in the lexer component to ensure
+proper syntax checking. Added TokenValidator class with validation rules
+for identifiers, keywords, and operators. Updated Lexer.php to integrate
+validation during tokenization process.
 ```
 
-Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`
+**What NOT to Include:**
+- ❌ Acceptance criteria lists
+- ❌ Author names or emails in the message body
+- ❌ Task progress percentages
+- ❌ Generic descriptions like "Updated code" or "Fixed stuff"
+- ❌ Overly verbose explanations (keep to 3-4 lines)
 
 ### `finish` - Complete Task Branch
 
@@ -175,9 +212,15 @@ Keep task branches up to date with main/develop.
 
 ### Commit Practices
 - Commit frequently within a task
-- Write meaningful commit messages
-- Reference task number in every commit
+- Write meaningful, descriptive commit messages
+- Reference task number in every commit using `[Task XX]` prefix
 - Keep commits focused and atomic
+- Always analyze changed files and diffs before generating commit messages
+- Use clear, concise titles (max 50 characters)
+- Provide detailed descriptions (3-4 lines) explaining what and why
+- Never include acceptance criteria or author information in commit messages
+- Use conventional commit types: feat, fix, refactor, test, docs, chore, perf, style
+- Always request user approval before committing
 
 ### Conflict Resolution
 - When conflicts occur, explain the conflict clearly
