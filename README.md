@@ -42,13 +42,13 @@ Add this marketplace to your Claude Code installation using one of the following
 If you've cloned this repository locally:
 
 ```bash
-/plugin marketplace add /path/to/claude-code-plugins
+/plugin marketplace add /path/to/funkyoz-plugins
 ```
 
 Or directly reference the marketplace file:
 
 ```bash
-/plugin marketplace add /path/to/claude-code-plugins/.claude-plugin/marketplace.json
+/plugin marketplace add /path/to/funkyoz-plugins/.claude-plugin/marketplace.json
 ```
 
 ### Verify Installation
@@ -59,7 +59,7 @@ List all your configured marketplaces:
 /plugin marketplace list
 ```
 
-You should see `claude-code-plugins` in the list.
+You should see `funkyoz-plugins` in the list.
 
 ## Installing Plugins
 
@@ -80,7 +80,7 @@ This will show you all available plugins from all your marketplaces. Select the 
 Install a specific plugin by name:
 
 ```bash
-/plugin install software-engineer@claude-code-plugins
+/plugin install software-engineer@funkyoz-plugins
 ```
 
 The format is: `/plugin install <plugin-name>@<marketplace-name>`
@@ -102,7 +102,7 @@ It's recommended to periodically check for updates to ensure you have the latest
 When the marketplace adds new plugins or updates plugin information, refresh the marketplace catalog:
 
 ```bash
-/plugin marketplace update claude-code-plugins
+/plugin marketplace update funkyoz-plugins
 ```
 
 This command:
@@ -148,7 +148,7 @@ Follow this workflow to stay current:
 
 1. **Update marketplace metadata** (monthly or when you know updates are available):
    ```bash
-   /plugin marketplace update claude-code-plugins
+   /plugin marketplace update funkyoz-plugins
    ```
 
 2. **Check what's new**:
@@ -189,7 +189,7 @@ If your team uses the marketplace configuration in `.claude/settings.json`, team
 }
 ```
 
-When users run `/plugin marketplace update claude-code-plugins`, they'll get the same marketplace version as the rest of the team.
+When users run `/plugin marketplace update funkyoz-plugins`, they'll get the same marketplace version as the rest of the team.
 
 ## Managing the Marketplace
 
@@ -206,7 +206,7 @@ See all configured marketplaces:
 If you need to remove this marketplace and all its installed plugins:
 
 ```bash
-/plugin marketplace remove claude-code-plugins
+/plugin marketplace remove funkyoz-plugins
 ```
 
 **Warning:** This will also uninstall any plugins installed from this marketplace.
@@ -244,7 +244,7 @@ If you get an error when adding the marketplace:
 
 1. **Update the marketplace** first:
    ```bash
-   /plugin marketplace update claude-code-plugins
+   /plugin marketplace update funkyoz-plugins
    ```
 
 2. **Check plugin availability**:
@@ -264,7 +264,7 @@ If marketplace or plugin updates fail:
 3. **Check for local modifications** - If you've modified plugins locally, updates may conflict
 4. **Remove and reinstall** - As a last resort:
    ```bash
-   /plugin marketplace remove claude-code-plugins
+   /plugin marketplace remove funkyoz-plugins
    /plugin marketplace add funkyoz/funkyoz-plugins
    ```
 
