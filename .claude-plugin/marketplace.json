@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-plugins",
+  "owner": {
+    "name": "Lorenzo Dessimoni",
+    "email": "lorenzo.dessimoni@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "software-engineer",
+      "source": "./software-engineer",
+      "description": "Software Engineer Plugin for Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "Lorenzo Dessimoni"
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,16 @@
+{
+  "name": "software-engineer",
+  "description": "A comprehensive software engineering plugin that transforms feature requests into structured tasks, manages development workflow, and follows best practices for code implementation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lorenzo Dessimoni",
+    "email": "lorenzo.dessimoni@gmail.com"
+  },
+  "keywords": [
+    "software-engineering",
+    "task-management",
+    "planning",
+    "development",
+    "workflow"
+  ]
+}
