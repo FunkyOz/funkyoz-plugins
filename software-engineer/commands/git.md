@@ -1,6 +1,7 @@
 ---
 description: Manage git branches and commits aligned with task workflow
 argument-hint: <action> [task-number]
+model: claude-haiku-4-5
 ---
 
 # Git Integration Command
@@ -64,8 +65,9 @@ Create a comprehensive commit for the current task work.
 5. Auto-generate comprehensive commit message:
    - Descriptive title (max 50 characters)
    - Detailed description (3-4 lines max) based on actual code changes
-   - NO acceptance criteria
-   - NO author information in message body
+   - NEVER add acceptance criteria in message body
+   - NEVER add author information in message body
+   - NEVER add generated with/by in message body
 6. Show generated commit message to user for approval
 7. Create the commit after user approval
 8. Confirm to user

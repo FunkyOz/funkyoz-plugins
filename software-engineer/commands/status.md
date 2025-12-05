@@ -1,6 +1,7 @@
 ---
 description: Display the current status and progress of all development tasks
 argument-hint: [detailed]
+model: claude-haiku-4-5
 ---
 
 # Status Command
