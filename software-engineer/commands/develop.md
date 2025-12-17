@@ -1,7 +1,6 @@
 ---
 description: Start or continue development by executing tasks from the task breakdown
 argument-hint: [task-number|next|all]
-model: claude-sonnet-4-5
 ---
 
 # Develop Command

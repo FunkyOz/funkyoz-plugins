@@ -1,7 +1,6 @@
 ---
 description: Transform a feature request into a structured task breakdown with phases and dependencies
 argument-hint: <feature description>
-model: claude-sonnet-4-5
 ---
 
 # Plan Feature Command
